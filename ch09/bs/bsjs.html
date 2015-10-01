@@ -1,0 +1,14 @@
+<!-- Add JQuery + Bootstrap JS + CSS-->
+<script src="../jquery/jquery.min.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+<!-- Use a button with a nice tooltip shown at the bottom -->
+<button class="btn btn-default"
+data-toggle="tooltip" data-placement="bottom" title="Nice little tooltip message"> Hover over me to see the tooltip
+</button>
+
+<script>
+$(function(){ // on document ready
+    $('button').tooltip(); // add tooltip to all buttons
+});
+</script>
