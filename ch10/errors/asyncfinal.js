@@ -18,6 +18,6 @@ loadJSON('good.json', function (err, data) {
     else {
         // lets simulate an error by trying to access a property on an undefined variable
 		var foo;
-        //console.log(foo.bar);
+        console.log(data);
 	} 
 });
