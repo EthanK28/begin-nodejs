@@ -9,3 +9,4 @@ promise.then(function (val) {
 
 deffered.resolve('final value');
 
+

@@ -1,11 +1,5 @@
 var Q = require('q');
 
-Q.when(null).then(function (val){
-	console.log(vall == null);
-});
-
-var Q = require('q');
-
 Q.when(null).then(function (val) {
 	console.log(val == null);
 });

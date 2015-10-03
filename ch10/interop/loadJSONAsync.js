@@ -1,6 +1,6 @@
 var Q = require('q');
 var fs = require('fs');
-var readFileSync = Q.nbind(fs.readFile);
+var readFileAsync = Q.nbind(fs.readFile);
 
 function loadJSONAsync(filename){
 	return readFileAsync(filename)
@@ -13,16 +13,20 @@ function loadJSONAsync(filename){
 loadJSONAsync('good.json')
 	.then(function (val) { console.log(val); })
 	.catch(function (err) {
-		
+		console.log('good.json error', err.message);
 	})
 	.then(function () {
-		
+		return loadJSONAsync('abesent.json');
 	})
-	.then()
-	.catch()
-	.then
+	.then(function (val) { console.log(val); })
+	.catch(function (err) {
+		console.log('abent.json error', err.message);
+	})
 	.then(function () {
-		
+		return loadJSONAsync('bad.json');
+	})
+	.then(function (val) {
+		console.log(val);
 	})
 	.catch(function (err) {
 		console.log('bad.json errorr', err.message);
